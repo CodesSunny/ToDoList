@@ -18,10 +18,13 @@ window.onload = () => {
 
     if (isUpdate || isUpdate === 0) {
       data[isUpdate] = inputText; //update the spacific index data that comes from isUpdate(updateTask)
-      const allTr = document.querySelectorAll("tbody tr");
-      allTr[isUpdate].querySelector("td.task-title").innerText = inputText;
+      // const allTr = document.querySelectorAll("tbody tr");
+      // allTr[isUpdate].querySelector("td.task-title").innerText = inputText;
+      // or 
+      printTodo()
       addlistBtn.innerText = "Add To List"; //changing the button text to default
       isUpdate = false; // set isUpdate to false for adding new data
+
     } else {
       const isAvailable = data.some(
         (todo) => todo.toLowerCase() === inputText.toLowerCase()
